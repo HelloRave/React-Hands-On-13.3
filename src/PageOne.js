@@ -4,15 +4,19 @@ import { useNavigate } from "react-router-dom";
 export default function PageOne() {
   const history = useNavigate();
 
-  function gotoPageTwo() {}
+  function gotoPageTwo() {
+    history('/two')
+  }
 
-  function gotoPageThree() {}
+  function gotoPageThree() {
+    history('three')
+  }
 
   return (
     <React.Fragment>
       <div>
-        <button>Page Two</button>
-        <button>Page Three</button>
+        <button onClick={gotoPageTwo}>Page Two</button>
+        <button onClick={gotoPageThree}>Page Three</button>
       </div>
     </React.Fragment>
   );
